@@ -1,0 +1,49 @@
+/* Theme 1A — light. Token values from the design handoff README. */
+.root {
+    -c-region-bg: #EEF0F4;
+    -c-surface: #FFFFFF;
+    -c-surface-subtle: #F7F8FA;
+    -c-inset-bg: #F1F3F6;
+    -c-appbar-bg: #FFFFFF;
+    -c-toolbar2-bg: #FAFAFC;
+    -c-tree-bg: #FFFFFF;
+    -c-props-bg: #FFFFFF;
+    -c-input-bg: #FFFFFF;
+    -c-hairline: #EBEDF1;
+    -c-hairline-strong: #E4E7EC;
+    -c-control-border: #E4E7EC;
+    -c-text: #171A20;
+    -c-text-secondary: #5B6472;
+    -c-text-muted: #8A93A2;
+    -c-accent: #5145E8;
+    -c-accent-text: #5145E8;
+    -c-accent-soft: #F1F0FE;
+    -c-accent-border: #DAD8FB;
+    -c-accent-shadow: rgba(81,69,232,0.30);
+    -c-segment-active-bg: #FFFFFF;
+    -c-structure: #5145E8;
+    -c-condition: #C4820A;
+    -c-code: #7C3AED;
+    -c-data: #0E7C86;
+    -c-success: #12855A;
+    -c-error: #C0392B;
+    -c-token-bg: #EEF0FF;
+    -c-token-text: #3B39C9;
+    -c-token-border: #DCDDFA;
+    -c-paper: #FFFFFF;
+    -c-paper-shadow: rgba(28,32,54,0.16);
+    -c-margin-guide: #D7DAF2;
+
+    /* code editor (F-1.35) */
+    -c-code-bg: #FFFFFF;
+    -c-code-text: #171A20;
+    -c-code-lineno: #B3BAC6;
+    -c-code-xsl: #7C3AED;
+    -c-code-fo: #0E7C86;
+    -c-code-tag: #1D4ED8;
+    -c-code-bracket: #8A93A2;
+    -c-code-attr: #B45309;
+    -c-code-value: #12855A;
+    -c-code-comment: #9AA3B2;
+    -c-code-error-bg: #FDEBE9;
+}

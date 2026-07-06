@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 200 200" fill="none" role="img" aria-label="Stylus report designer icon">
+  <defs>
+    <linearGradient id="bg" x1="30" y1="10" x2="170" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E62F2"></stop>
+      <stop offset="1" stop-color="#4736D4"></stop>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.22"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+
+  
+  <path d="M100 4C41 4 4 41 4 100s37 96 96 96 96-37 96-96S159 4 100 4Z" fill="url(#bg)"></path>
+  <path d="M100 4C41 4 4 41 4 100s37 96 96 96 96-37 96-96S159 4 100 4Z" fill="url(#sheen)"></path>
+
+  
+  <rect x="66" y="50" width="68" height="100" rx="9" fill="#ffffff"></rect>
+  <rect x="78" y="66" width="44" height="8" rx="4" fill="#4736D4"></rect>
+  <rect x="78" y="86" width="44" height="6" rx="3" fill="#C7CBF2"></rect>
+  <rect x="78" y="100" width="30" height="6" rx="3" fill="#C7CBF2"></rect>
+  <rect x="78" y="118" width="44" height="10" rx="3" fill="#F2C14E"></rect>
+  <rect x="78" y="136" width="24" height="6" rx="3" fill="#C7CBF2"></rect>
+
+  
+  <path d="M52 62c-11 6-16 20-16 38s5 32 16 38" stroke="#ffffff" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M148 62c11 6 16 20 16 38s-5 32-16 38" stroke="#ffffff" stroke-width="9" stroke-linecap="round"></path>
+</svg>

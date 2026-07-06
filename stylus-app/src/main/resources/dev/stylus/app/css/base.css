@@ -1,0 +1,988 @@
+/*
+ * Stylus shell — structural styles. Palette comes from theme-light.css / theme-dark.css via
+ * looked-up colors (-c-*). Values per design_handoff_xslt_report_designer/README.md tokens.
+ */
+
+.root {
+    -fx-font-family: "Hanken Grotesk";
+    -fx-font-size: 12.5px;
+    -fx-background-color: -c-region-bg;
+    -fx-text-fill: -c-text;
+}
+
+.label {
+    -fx-text-fill: -c-text;
+}
+
+.shell-body {
+    -fx-background-color: -c-region-bg;
+}
+
+.pane-divider {
+    -fx-background-color: -c-hairline;
+    -fx-padding: 0;
+    -fx-max-width: 1;
+    -fx-pref-width: 1;
+}
+.pane-divider .line {
+    -fx-border-color: transparent;
+    -fx-background-color: -c-hairline;
+}
+
+/* ---------- App bar (46px) ---------- */
+
+.app-bar {
+    -fx-background-color: -c-appbar-bg;
+    -fx-min-height: 46;
+    -fx-pref-height: 46;
+    -fx-padding: 0 12 0 14;
+    -fx-spacing: 8;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.app-bar-filename {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+.app-bar-datasource {
+    -fx-text-fill: -c-text-muted;
+}
+.unsaved-dot {
+    -fx-fill: -c-condition;
+}
+
+/* Segmented control (view switch, tabs, mode toggle) */
+.segmented {
+    -fx-background-color: -c-inset-bg;
+    -fx-background-radius: 9;
+    -fx-padding: 2;
+    -fx-spacing: 1;
+    -fx-alignment: center-left;
+}
+.segmented .segment {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7;
+    -fx-padding: 4 12 4 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-text-fill: -c-text-secondary;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+.segmented .segment:selected {
+    -fx-background-color: -c-segment-active-bg;
+    -fx-text-fill: -c-accent-text;
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(gaussian, rgba(28,32,54,0.18), 4, 0, 0, 1);
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7;
+    -fx-padding: 4 8 4 8;
+    -fx-text-fill: -c-text-secondary;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+.icon-button:hover {
+    -fx-background-color: -c-inset-bg;
+}
+
+.primary-button {
+    -fx-background-color: -c-accent;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-background-radius: 9;
+    -fx-padding: 6 15 6 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, -c-accent-shadow, 10, 0, 0, 3);
+}
+.primary-button:hover {
+    -fx-background-color: derive(-c-accent, 12%);
+}
+
+/* ---------- Toolbars ---------- */
+
+.toolbar-row1 {
+    -fx-background-color: -c-surface;
+    -fx-min-height: 42;
+    -fx-pref-height: 42;
+    -fx-padding: 0 12 0 12;
+    -fx-spacing: 3;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.toolbar-row2 {
+    -fx-background-color: -c-toolbar2-bg;
+    -fx-min-height: 44;
+    -fx-pref-height: 44;
+    -fx-padding: 0 12 0 12;
+    -fx-spacing: 7;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.toolbar-divider {
+    -fx-padding: 4 4 4 4;
+}
+.toolbar-divider .line {
+    -fx-border-color: -c-hairline;
+    -fx-border-width: 0 1 0 0;
+}
+.toolbar-eyebrow {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10.5px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -c-text-muted;
+}
+
+.toolbar-combo {
+    -fx-background-color: -c-surface;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 7;
+    -fx-font-size: 12px;
+}
+
+.glyph-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-padding: 2 6 2 6;
+    -fx-font-weight: 600;
+    -fx-text-fill: -c-text-secondary;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+.glyph-button:hover {
+    -fx-background-color: -c-inset-bg;
+}
+.glyph-italic { -fx-font-style: italic; }
+.glyph-underline { -fx-underline: true; }
+
+/* Insert pills (toolbar row 2) */
+.pill-button {
+    -fx-background-color: -c-surface;
+    -fx-background-radius: 16;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 16;
+    -fx-padding: 5 13 5 13;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-text-fill: -c-text-secondary;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+.pill-button:hover {
+    -fx-background-color: -c-inset-bg;
+}
+.pill-emphasized {
+    -fx-background-color: -c-accent-soft;
+    -fx-border-color: -c-accent-border;
+    -fx-text-fill: -c-accent-text;
+    -fx-font-weight: 600;
+}
+.cat-structure { -fx-text-fill: -c-structure; }
+.cat-condition { -fx-text-fill: -c-condition; }
+.cat-code { -fx-text-fill: -c-code; }
+.cat-data { -fx-text-fill: -c-data; }
+
+/* ---------- Panes ---------- */
+
+.tree-pane {
+    -fx-background-color: -c-tree-bg;
+    -fx-padding: 12 14 10 14;
+    -fx-spacing: 10;
+}
+.props-pane {
+    -fx-background-color: -c-props-bg;
+    -fx-padding: 12 14 10 14;
+    -fx-spacing: 10;
+}
+.pane-header {
+    -fx-spacing: 8;
+}
+.eyebrow {
+    -fx-font-size: 10.5px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -c-text-muted;
+}
+.badge {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10;
+    -fx-padding: 1 7 1 7;
+}
+.badge-teal {
+    -fx-background-color: derive(-c-data, 82%);
+    -fx-text-fill: -c-data;
+}
+.tree-search {
+    -fx-background-color: -c-input-bg;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 7;
+    -fx-pref-height: 31;
+    -fx-font-size: 12px;
+    -fx-prompt-text-fill: -c-text-muted;
+    -fx-text-fill: -c-text;
+}
+.empty-state {
+    -fx-text-fill: -c-text-muted;
+    -fx-font-size: 12px;
+    -fx-text-alignment: center;
+}
+.pane-footer {
+    -fx-text-fill: -c-text-muted;
+    -fx-font-size: 11px;
+}
+.props-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* ---------- Canvas ---------- */
+
+.canvas-pane {
+    -fx-background-color: -c-region-bg;
+}
+.ruler-strip {
+    -fx-background-color: -c-surface;
+    -fx-min-height: 34;
+    -fx-pref-height: 34;
+    -fx-padding: 0 12 0 12;
+    -fx-spacing: 10;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.ruler {
+    -fx-background-color: transparent;
+}
+.mono-readout {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+}
+.canvas-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.canvas-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+.paper-holder {
+    -fx-padding: 26 0 40 0;
+    -fx-background-color: transparent;
+}
+.paper {
+    -fx-background-color: -c-paper;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, -c-paper-shadow, 24, 0, 0, 4);
+}
+.margin-guides {
+    -fx-border-color: -c-margin-guide;
+    -fx-border-style: dashed;
+    -fx-border-width: 1;
+}
+.code-view {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 12px;
+}
+
+/* ---------- Data tree (M4) ---------- */
+
+.data-tree {
+    -fx-background-color: transparent;
+}
+.data-tree .tree-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 2 4 2 4;
+    -fx-font-size: 12.5px;
+}
+.data-tree .tree-cell:selected {
+    -fx-background-color: -c-accent-soft;
+}
+.tree-glyph {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-min-width: 18;
+    -fx-alignment: center;
+}
+.glyph-element { -fx-text-fill: -c-condition; }
+.glyph-text { -fx-text-fill: -c-success; }
+.glyph-data { -fx-text-fill: -c-data; }
+.glyph-date { -fx-text-fill: -c-condition; }
+.tree-name {
+    -fx-text-fill: -c-text;
+}
+.badge-group {
+    -fx-background-color: -c-accent-soft;
+    -fx-text-fill: -c-accent-text;
+}
+.tree-count {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-text-fill: -c-text-muted;
+}
+.tree-drag-handle {
+    -fx-text-fill: -c-text-muted;
+    -fx-cursor: open-hand;
+}
+
+/* ---------- Canvas bands (M4, handoff §5) ---------- */
+
+.canvas-band {
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+.canvas-band.selected {
+    -fx-border-color: -c-accent;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(gaussian, -c-accent-shadow, 8, 0, 0, 0);
+}
+.band-eyebrow-label {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 9px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -c-text-muted;
+}
+.margin-band {
+    -fx-border-color: -c-hairline-strong;
+    -fx-border-style: dashed;
+    -fx-border-radius: 4;
+    -fx-background-color: -c-surface-subtle;
+    -fx-padding: 6 10 6 10;
+}
+.static-band {
+    -fx-padding: 6 8 6 8;
+    -fx-text-fill: #171A20;
+}
+.static-band .inline-text, .margin-band .inline-text,
+.detail-grid .inline-text, .cond-band .inline-text {
+    -fx-text-fill: #171A20;
+}
+.group-band {
+    -fx-border-color: #DBD9F6;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-color: #FBFBFF;
+    -fx-background-radius: 8;
+}
+.group-band-header {
+    -fx-background-color: linear-gradient(to right, #EEEDFF, #F6F5FF);
+    -fx-background-radius: 7 7 0 0;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: transparent transparent #E4E3F4 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.group-loop-icon {
+    -fx-text-fill: #5145E8;
+    -fx-font-weight: 700;
+}
+.group-band .band-eyebrow-label {
+    -fx-text-fill: #5145E8;
+}
+.group-path {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: #3B39C9;
+}
+.sort-pill {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 9.5px;
+    -fx-background-color: #EEF0FF;
+    -fx-text-fill: #3B39C9;
+    -fx-background-radius: 10;
+    -fx-padding: 1 8 1 8;
+    -fx-border-color: #DCDDFA;
+    -fx-border-radius: 10;
+}
+.group-repeat {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-text-fill: #7C79E0;
+}
+.group-band-body {
+    -fx-padding: 8 10 8 10;
+}
+.table-band {
+    -fx-padding: 4 8 4 8;
+}
+.detail-grid {
+    -fx-border-color: #E4E7EC;
+    -fx-border-radius: 4;
+    -fx-padding: 6;
+    -fx-hgap: 8;
+    -fx-vgap: 4;
+    -fx-background-color: white;
+}
+.detail-grid-header {
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #5B6472;
+    -fx-border-color: transparent transparent #C6CBD4 transparent;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-padding: 0 0 3 0;
+}
+.cond-band {
+    -fx-background-color: #FFFBF2;
+    -fx-border-color: #F0E3C4;
+    -fx-border-style: dashed;
+    -fx-border-radius: 6;
+    -fx-padding: 7 10 7 10;
+}
+.if-pill {
+    -fx-background-color: #C4820A;
+    -fx-text-fill: white;
+    -fx-font-size: 9.5px;
+    -fx-font-weight: 800;
+    -fx-background-radius: 8;
+    -fx-padding: 1 8 1 8;
+}
+.cond-expr {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: #8A5A06;
+}
+.else-label {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 9px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #8A93A2;
+}
+.opaque-band {
+    -fx-background-color: #F4F5F7;
+    -fx-border-color: #D9DDE3;
+    -fx-border-style: dashed;
+    -fx-border-radius: 6;
+    -fx-padding: 7 10 7 10;
+}
+.opaque-preview {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10.5px;
+    -fx-text-fill: #5B6472;
+}
+.field-token {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-background-color: #EEF0FF;
+    -fx-text-fill: #0A6A73;
+    -fx-background-radius: 6;
+    -fx-padding: 1 7 1 7;
+    -fx-border-color: #DCDDFA;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+.field-token-code {
+    -fx-text-fill: #7C3AED;
+}
+.field-token-opaque {
+    -fx-text-fill: #8A93A2;
+}
+.drop-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #AEB5C0;
+    -fx-border-color: #D7DAF2;
+    -fx-border-style: dashed;
+    -fx-border-radius: 6;
+    -fx-padding: 10 14 10 14;
+}
+
+/* Properties (M4) */
+.props-glyph {
+    -fx-background-color: -c-accent;
+    -fx-text-fill: white;
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 7;
+    -fx-min-width: 26;
+    -fx-min-height: 26;
+    -fx-alignment: center;
+}
+.props-subtitle {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10.5px;
+    -fx-text-fill: -c-text-muted;
+}
+.props-body {
+    -fx-padding: 4 0 0 0;
+}
+.props-value {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11.5px;
+    -fx-text-fill: -c-text;
+    -fx-background-color: -c-inset-bg;
+    -fx-background-radius: 6;
+    -fx-padding: 5 8 5 8;
+}
+.props-note {
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+}
+
+/* ---------- Expression editor overlay (M5, handoff §7) ---------- */
+
+.expr-overlay {
+    -fx-background-color: -c-surface;
+    -fx-background-radius: 12;
+    -fx-border-color: -c-hairline-strong;
+    -fx-border-radius: 12;
+    -fx-padding: 12 14 12 14;
+    -fx-spacing: 8;
+    -fx-effect: dropshadow(gaussian, rgba(28,32,54,0.40), 44, 0, 0, 20);
+}
+.expr-title {
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 700;
+}
+.expr-code {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 12px;
+    -fx-control-inner-background: #1C1F2A;
+    -fx-text-fill: #E4E7EE;
+    -fx-highlight-fill: #5145E8;
+    -fx-background-color: #1C1F2A;
+    -fx-background-radius: 8;
+}
+.expr-code .content {
+    -fx-background-color: #1C1F2A;
+    -fx-background-radius: 8;
+}
+.expr-palette {
+    -fx-padding: 2 0 2 0;
+}
+.expr-chip {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10.5px;
+    -fx-background-color: -c-accent-soft;
+    -fx-text-fill: -c-code;
+    -fx-background-radius: 12;
+    -fx-border-color: -c-accent-border;
+    -fx-border-radius: 12;
+    -fx-padding: 2 9 2 9;
+    -fx-cursor: hand;
+}
+.expr-chip-bip {
+    -fx-background-color: derive(-c-data, 88%);
+    -fx-text-fill: -c-data;
+    -fx-border-color: derive(-c-data, 60%);
+}
+.expr-chip-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: -c-hairline;
+    -fx-border-radius: 8;
+}
+.expr-chip-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+.expr-status { -fx-font-size: 11.5px; -fx-font-weight: 600; }
+.expr-status-ok { -fx-text-fill: -c-success; }
+.expr-status-error { -fx-text-fill: -c-error; }
+.expr-preview {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-secondary;
+}
+
+.fx-button {
+    -fx-background-color: -c-accent-soft;
+    -fx-text-fill: -c-accent-text;
+    -fx-font-weight: 700;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-accent-border;
+    -fx-border-radius: 7;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+.danger-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-error;
+    -fx-border-color: -c-error;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 11.5px;
+    -fx-cursor: hand;
+}
+.props-field {
+    -fx-background-color: -c-input-bg;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 7;
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11.5px;
+    -fx-text-fill: -c-text;
+}
+
+/* ---------- Test bench (M2, catalog §5) ---------- */
+
+.bench-pane {
+    -fx-background-color: -c-surface;
+}
+.bench-controls {
+    -fx-padding: 10 12 8 12;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.bench-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+}
+.bench-button {
+    -fx-background-color: -c-surface;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 7;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 12px;
+    -fx-text-fill: -c-text-secondary;
+    -fx-cursor: hand;
+}
+.bench-button:hover {
+    -fx-background-color: -c-inset-bg;
+}
+.bench-file-pane {
+    -fx-padding: 8 10 8 10;
+    -fx-background-color: -c-surface;
+}
+.file-list, .log-list {
+    -fx-background-color: -c-input-bg;
+    -fx-background-radius: 7;
+    -fx-border-color: -c-hairline;
+    -fx-border-radius: 7;
+    -fx-font-size: 12px;
+}
+.file-list .list-cell, .log-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -c-text;
+    -fx-padding: 3 8 3 8;
+}
+.file-list .list-cell:selected {
+    -fx-background-color: -c-accent-soft;
+    -fx-text-fill: -c-accent-text;
+}
+.bench-log-pane {
+    -fx-padding: 8 10 8 10;
+    -fx-background-color: -c-surface;
+}
+.log-list .list-cell {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+}
+.log-list .log-error { -fx-text-fill: -c-error; }
+.log-list .log-exception { -fx-text-fill: -c-error; }
+.log-list .log-event { -fx-text-fill: -c-text; }
+.log-list .log-procedure { -fx-text-fill: -c-text-secondary; }
+.log-list .log-statement { -fx-text-fill: -c-text-muted; }
+
+.canvas-split {
+    -fx-background-color: -c-region-bg;
+    -fx-padding: 0;
+}
+.canvas-split > .split-pane-divider {
+    -fx-background-color: -c-hairline;
+    -fx-padding: 0 0 1 0;
+}
+
+/* ---------- Preview ---------- */
+
+.preview-pane {
+    -fx-background-color: -c-region-bg;
+}
+.preview-bar {
+    -fx-background-color: -c-surface;
+    -fx-padding: 6 12 6 12;
+    -fx-border-color: transparent transparent -c-hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.preview-status {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-secondary;
+}
+.preview-pages {
+    -fx-padding: 20 0 30 0;
+    -fx-background-color: transparent;
+}
+.preview-page-holder {
+    -fx-effect: dropshadow(gaussian, -c-paper-shadow, 24, 0, 0, 4);
+}
+
+.menu-bar {
+    -fx-background-color: -c-appbar-bg;
+}
+
+/* ---------- Status bar (32px) ---------- */
+
+.status-bar {
+    -fx-background-color: -c-appbar-bg;
+    -fx-min-height: 32;
+    -fx-pref-height: 32;
+    -fx-padding: 0 12 0 12;
+    -fx-spacing: 12;
+    -fx-border-color: -c-hairline transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.status-valid {
+    -fx-text-fill: -c-success;
+    -fx-font-size: 11.5px;
+    -fx-font-weight: 500;
+}
+.status-label {
+    -fx-text-fill: -c-text-muted;
+    -fx-font-size: 11.5px;
+}
+.format-chips {
+    -fx-spacing: 4;
+}
+.format-chip {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10.5px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -c-text-muted;
+    -fx-background-radius: 6;
+    -fx-padding: 2 8 2 8;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 6;
+}
+.format-chip-active {
+    -fx-background-color: -c-error;
+    -fx-border-color: -c-error;
+    -fx-text-fill: white;
+}
+
+/* ---------- Conditional format rules + data tab (M5, F-1.28/F-1.29) ---------- */
+
+.rules-badge {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -c-accent;
+    -fx-background-color: -c-accent-soft;
+    -fx-background-radius: 6;
+    -fx-padding: 3 10 3 10;
+    -fx-cursor: hand;
+}
+.rules-chip {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -c-accent;
+    -fx-background-color: -c-accent-soft;
+    -fx-background-radius: 5;
+    -fx-padding: 1 6 1 6;
+}
+.data-row {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+    -fx-padding: 2 6 2 6;
+}
+.data-row-hit {
+    -fx-text-fill: -c-accent;
+    -fx-background-color: -c-accent-soft;
+    -fx-background-radius: 5;
+}
+
+/* ---------- XSLT code editor (F-1.35/F-1.37) ---------- */
+
+.code-editor {
+    -fx-background-color: -c-code-bg;
+}
+.code-editor-area {
+    -fx-background-color: -c-code-bg;
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 12px;
+}
+.code-editor-area .text {
+    -fx-fill: -c-code-text;
+}
+.code-editor-area .lineno {
+    -fx-background-color: -c-code-bg;
+    -fx-text-fill: -c-code-lineno;
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-padding: 0 8 0 8;
+}
+.code-editor-area .code-tag-xsl { -fx-fill: -c-code-xsl; -fx-font-weight: bold; }
+.code-editor-area .code-tag-fo { -fx-fill: -c-code-fo; }
+.code-editor-area .code-tag { -fx-fill: -c-code-tag; }
+.code-editor-area .code-bracket { -fx-fill: -c-code-bracket; }
+.code-editor-area .code-attr { -fx-fill: -c-code-attr; }
+.code-editor-area .code-value { -fx-fill: -c-code-value; }
+.code-editor-area .code-comment { -fx-fill: -c-code-comment; -fx-font-style: italic; }
+.code-editor-area .code-cdata { -fx-fill: -c-code-comment; }
+.code-editor-area .code-error-line {
+    -fx-background-color: -c-code-error-bg;
+}
+.code-validation {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-padding: 5 12 5 12;
+    -fx-border-color: -c-hairline transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.code-validation-ok { -fx-text-fill: -c-success; }
+.code-validation-error { -fx-text-fill: -c-error; }
+
+/* ---------- Drop caret + FO structure outlines (F-1.21/F-1.46) ---------- */
+
+.drop-caret {
+    -fx-background-color: -c-accent;
+    -fx-background-radius: 2;
+}
+.fo-structure .static-band,
+.fo-structure .group-band,
+.fo-structure .group-band-body,
+.fo-structure .table-band,
+.fo-structure .detail-grid-cell,
+.fo-structure .cond-band,
+.fo-structure .opaque-band {
+    -fx-border-color: -c-accent-border;
+    -fx-border-width: 1;
+}
+.fo-structure .field-token,
+.fo-structure .inline-text {
+    -fx-border-color: -c-accent-border;
+    -fx-border-width: 1;
+    -fx-border-style: segments(2, 2);
+}
+.toolbar-color {
+    -fx-color-label-visible: false;
+    -fx-pref-width: 40;
+}
+
+/* ---------- Image bands (F-7.1/F-7.2) ---------- */
+
+.image-band {
+    -fx-padding: 6;
+    -fx-border-color: -c-hairline;
+    -fx-border-style: segments(3, 3);
+    -fx-border-radius: 6;
+}
+.image-chip {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-data;
+    -fx-background-color: -c-inset-bg;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10 6 10;
+}
+
+/* ---------- xsl:text literals + special-character picker ---------- */
+
+.xsltext-run {
+    -fx-font-size: 12.5px;
+    -fx-border-color: transparent transparent -c-data transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: segments(2, 2);
+    -fx-cursor: hand;
+}
+.ncr-preview {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+}
+.char-cell {
+    -fx-font-size: 13px;
+    -fx-min-width: 44;
+    -fx-padding: 4 6 4 6;
+    -fx-background-radius: 6;
+    -fx-border-color: -c-control-border;
+    -fx-border-radius: 6;
+    -fx-background-color: -c-surface;
+    -fx-cursor: hand;
+}
+.char-cell:hover {
+    -fx-border-color: -c-accent;
+}
+
+/* ---------- §1.8: hover hairlines, FO chip, breadcrumb, engine badges ---------- */
+
+.static-band {
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+}
+.static-band:hover,
+.image-band:hover,
+.group-band:hover,
+.table-band:hover,
+.cond-band:hover,
+.opaque-band:hover {
+    -fx-border-color: -c-accent;
+}
+.field-token:hover {
+    -fx-border-color: -c-accent;
+}
+.xsltext-run:hover {
+    -fx-border-color: transparent transparent -c-accent transparent;
+}
+.fo-chip {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -c-code;
+    -fx-background-color: -c-inset-bg;
+    -fx-background-radius: 5;
+    -fx-padding: 1 6 1 6;
+}
+.fo-breadcrumb {
+    -fx-padding: 4 12 0 12;
+}
+.crumb {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 10px;
+    -fx-text-fill: -c-text-muted;
+    -fx-cursor: hand;
+    -fx-underline: false;
+}
+.crumb:hover {
+    -fx-text-fill: -c-accent;
+}
+.crumb-current {
+    -fx-text-fill: -c-text;
+    -fx-cursor: default;
+}
+.crumb-sep {
+    -fx-font-size: 9px;
+    -fx-text-fill: -c-text-muted;
+    -fx-padding: 0 2 0 2;
+}
+.engine-badge-error {
+    -fx-font-size: 11px;
+    -fx-text-fill: white;
+    -fx-background-color: -c-error;
+    -fx-background-radius: 6;
+    -fx-padding: 4 10 4 10;
+}
+.engine-badge-warn {
+    -fx-font-size: 11px;
+    -fx-text-fill: #5B4300;
+    -fx-background-color: #FBEAB8;
+    -fx-background-radius: 6;
+    -fx-padding: 4 10 4 10;
+}
+.raw-xml-editor {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 11px;
+}
+
+/* ---------- ghost header/footer bands ---------- */
+
+.ghost-band {
+    -fx-font-size: 11px;
+    -fx-text-fill: -c-text-muted;
+    -fx-border-color: -c-hairline-strong;
+    -fx-border-style: segments(4, 4);
+    -fx-border-radius: 6;
+    -fx-padding: 6;
+    -fx-cursor: hand;
+}
+.ghost-band:hover {
+    -fx-text-fill: -c-accent;
+    -fx-border-color: -c-accent-border;
+}

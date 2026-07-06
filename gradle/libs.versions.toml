@@ -1,0 +1,23 @@
+[versions]
+javafx = "21.0.6"
+javafxplugin = "0.1.0"
+saxon = "12.5"
+fop = "2.10"
+pdfbox = "3.0.4"
+richtextfx = "0.11.5"
+jackson = "2.18.2"
+slf4j = "2.0.16"
+junit = "5.11.4"
+
+[libraries]
+saxon-he = { module = "net.sf.saxon:Saxon-HE", version.ref = "saxon" }
+fop-core = { module = "org.apache.xmlgraphics:fop-core", version.ref = "fop" }
+fop = { module = "org.apache.xmlgraphics:fop", version.ref = "fop" }
+pdfbox = { module = "org.apache.pdfbox:pdfbox", version.ref = "pdfbox" }
+richtextfx = { module = "org.fxmisc.richtext:richtextfx", version.ref = "richtextfx" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+
+[plugins]
+javafx = { id = "org.openjfx.javafxplugin", version.ref = "javafxplugin" }

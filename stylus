@@ -1,0 +1,66 @@
+#!/bin/zsh
+# Stylus launcher — starts the designer (or the CLI) with a suitable JDK.
+#
+#   ./stylus                 start the designer (bench opens your last working dir)
+#   ./stylus samples         start with the bundled samples/ as working dir
+#   ./stylus /path/to/dir    start with that working dir
+#   ./stylus cli <args…>     run the headless CLI (render/engines/formats)
+#
+# JDK resolution order: $STYLUS_JAVA_HOME → $JAVA_HOME (if 21+) → ~/tools/jdk-21* → java_home.
+
+set -e
+cd "$(dirname "$0")"
+
+# ---- find a JDK 21+ ----
+java_major() { "$1/bin/java" -version 2>&1 | sed -nE 's/.*version "([0-9]+).*/\1/p' | head -1; }
+
+find_jdk() {
+  local candidates=()
+  [[ -n "$STYLUS_JAVA_HOME" ]] && candidates+=("$STYLUS_JAVA_HOME")
+  [[ -n "$JAVA_HOME" ]] && candidates+=("$JAVA_HOME")
+  for d in "$HOME"/tools/jdk-21*/Contents/Home(N/) "$HOME"/tools/jdk-2[2-9]*/Contents/Home(N/); do
+    candidates+=("$d")
+  done
+  if command -v /usr/libexec/java_home >/dev/null 2>&1; then
+    local jh
+    jh=$(/usr/libexec/java_home -v 21+ 2>/dev/null) && candidates+=("$jh")
+  fi
+  for c in "${candidates[@]}"; do
+    if [[ -x "$c/bin/java" ]]; then
+      local major=$(java_major "$c")
+      if [[ -n "$major" && "$major" -ge 21 ]]; then
+        echo "$c"
+        return 0
+      fi
+    fi
+  done
+  return 1
+}
+
+if ! JAVA_HOME=$(find_jdk); then
+  echo "stylus: no JDK 21+ found." >&2
+  echo "  Install one (e.g. Temurin 21 into ~/tools) or set STYLUS_JAVA_HOME." >&2
+  exit 1
+fi
+export JAVA_HOME
+
+# ---- dispatch ----
+case "$1" in
+  cli)
+    shift
+    exec ./gradlew --console=plain -q :stylus-cli:run --args="$*"
+    ;;
+  "")
+    exec ./gradlew :stylus-app:run --console=plain -q
+    ;;
+  samples)
+    exec ./gradlew :stylus-app:run --console=plain -q -Dstylus.workingDir="$PWD/samples"
+    ;;
+  *)
+    if [[ -d "$1" ]]; then
+      exec ./gradlew :stylus-app:run --console=plain -q -Dstylus.workingDir="${1:A}"
+    fi
+    echo "stylus: unknown argument '$1' (expected: nothing, 'samples', a directory, or 'cli …')" >&2
+    exit 2
+    ;;
+esac

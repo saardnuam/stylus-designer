@@ -1,0 +1,13 @@
+# Oracle-proprietary jars — local dev fixture only, never commit (CLAUDE.md hard rule #1)
+lib/bip/*.jar
+
+# Build / IDE
+build/
+out/
+design_handoff_xslt_report_designer/
+.gradle/
+.idea/
+*.iml
+
+# macOS
+.DS_Store

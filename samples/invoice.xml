@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InvoiceData>
+  <Company>
+    <Name>Acme B.V.</Name>
+    <Address>Keizersgracht 1, Amsterdam</Address>
+  </Company>
+  <Customers>
+    <Customer>
+      <Name>Jansen &amp; Zonen</Name>
+      <Region>EMEA</Region>
+      <Orders>
+        <Order>
+          <OrderID>1001</OrderID>
+          <OrderDate>2026-05-14</OrderDate>
+          <LineItem>
+            <Product>Widget</Product>
+            <Qty>2</Qty>
+            <UnitPrice>12.50</UnitPrice>
+            <Amount>25.00</Amount>
+          </LineItem>
+          <LineItem>
+            <Product>Gadget Pro</Product>
+            <Qty>1</Qty>
+            <UnitPrice>1099.00</UnitPrice>
+            <Amount>1099.00</Amount>
+          </LineItem>
+        </Order>
+        <Order>
+          <OrderID>1002</OrderID>
+          <OrderDate>2026-06-02</OrderDate>
+          <LineItem>
+            <Product>Sprocket</Product>
+            <Qty>10</Qty>
+            <UnitPrice>3.75</UnitPrice>
+            <Amount>37.50</Amount>
+          </LineItem>
+        </Order>
+      </Orders>
+    </Customer>
+    <Customer>
+      <Name>Global Trade Ltd</Name>
+      <Region>APAC</Region>
+      <Orders>
+        <Order>
+          <OrderID>2001</OrderID>
+          <OrderDate>2026-06-20</OrderDate>
+          <LineItem>
+            <Product>Doohickey</Product>
+            <Qty>4</Qty>
+            <UnitPrice>8.00</UnitPrice>
+            <Amount>32.00</Amount>
+          </LineItem>
+        </Order>
+      </Orders>
+    </Customer>
+  </Customers>
+</InvoiceData>

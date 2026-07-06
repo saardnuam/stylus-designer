@@ -1,0 +1,83 @@
+current_date	date	xdoxslt:current_date($_XDOLOCALE, $_XDOTIMEZONE)	current_date(locale, timezone) — current date for locale+timezone
+current_time	date	xdoxslt:current_time($_XDOLOCALE, $_XDOTIMEZONE)	current_time(locale, timezone) — current time for locale+timezone
+sysdate	date	xdoxslt:sysdate()	sysdate() — system date, raw
+sysdate_as_xsdformat	date	xdoxslt:sysdate_as_xsdformat()	sysdate_as_xsdformat() — system date in XSD format
+format_date	date	xdoxslt:format_date(, 'MASK', $_XDOLOCALE)	format_date(date, mask, locale) — format XSD date with Oracle mask
+format_date_tz	date	xdoxslt:format_date_tz(, 'MASK', $_XDOLOCALE, $_XDOTIMEZONE)	format_date_tz(date, mask, locale, tz)
+ora_format_date	date	xdoxslt:ora_format_date(, 'DD-MON-YYYY')	ora_format_date(date, mask) — Oracle-style date formatting
+ora_format_date_offset	date	xdoxslt:ora_format_date_offset(, 'DD-MON-YYYY', )	ora_format_date_offset(date, mask, offset)
+ora_format_date_tz	date	xdoxslt:ora_format_date_tz(, 'DD-MON-YYYY', $_XDOTIMEZONE)	ora_format_date_tz(date, mask, timezone)
+xdo_format_date	date	xdoxslt:xdo_format_date(, 'MASK', $_XDOLOCALE)	xdo_format_date(date, mask, locale) — locale/calendar-aware mask
+xdo_format_sysdate	date	xdoxslt:xdo_format_sysdate('MASK', $_XDOLOCALE)	xdo_format_sysdate(mask, locale)
+ms_format_date	date	xdoxslt:ms_format_date(, 'MASK')	ms_format_date(date, mask) — Microsoft-mask formatting
+ms_sysdate	date	xdoxslt:ms_sysdate('MASK')	ms_sysdate(mask) — system date with MS mask
+date_diff	date	xdoxslt:date_diff('d', , , $_XDOLOCALE, $_XDOTIMEZONE)	date_diff(unit, date1, date2, locale, tz) — difference in unit (y/m/d/h/mi/s)
+sec_diff	date	xdoxslt:sec_diff(, , $_XDOLOCALE, $_XDOTIMEZONE)	sec_diff(date1, date2, locale, tz) — difference in seconds
+get_day	date	xdoxslt:get_day()	get_day(date) — day-of-month part
+get_month	date	xdoxslt:get_month()	get_month(date) — month part
+get_year	date	xdoxslt:get_year()	get_year(date) — year part
+month_name	date	xdoxslt:month_name(, 0, $_XDOLOCALE)	month_name(month, abbreviate?, locale)
+increase_date	date	xdoxslt:increase_date(, 1)	increase_date(date, days) — add days
+decrease_date	date	xdoxslt:decrease_date(, 1)	decrease_date(date, days) — subtract days
+maximum_date	date	xdoxslt:maximum_date()	maximum_date(node-set) — latest date
+minimum_date	date	xdoxslt:minimum_date()	minimum_date(node-set) — earliest date
+date_to_millis	date	xdoxslt:date_to_millis()	date_to_millis(date) — epoch milliseconds
+millis_to_date	date	xdoxslt:millis_to_date()	millis_to_date(millis) — date from epoch
+time_in_millis	date	xdoxslt:time_in_millis()	time_in_millis() — current epoch milliseconds
+format_number	number	xdoxslt:format_number(, '#,##0.00', $_XDOLOCALE)	format_number(value, mask, locale) — locale-aware number mask
+xdo_format_number	number	xdoxslt:xdo_format_number(, '#,##0.00', $_XDOLOCALE)	xdo_format_number(value, mask, locale)
+pat_format_number	number	xdoxslt:pat_format_number(, '#,##0.00')	pat_format_number(value, pattern)
+format_bigdecimal_number	number	xdoxslt:format_bigdecimal_number(, '#,##0.00')	format_bigdecimal_number(value, mask) — BigDecimal precision
+ms_format_number	number	xdoxslt:ms_format_number(, 'MASK')	ms_format_number(value, ms-mask)
+xdo_format_currency	number	xdoxslt:xdo_format_currency(, 'EUR', $_XDOLOCALE)	xdo_format_currency(value, code, locale)
+to_number	number	xdoxslt:to_number()	to_number(string) — Oracle-style conversion
+to_char	number	xdoxslt:to_char()	to_char(value) — Oracle-style conversion
+abs	number	xdoxslt:abs()	abs(value) — absolute value
+round	number	xdoxslt:round(, 2)	round(value, decimals)
+is_numeric	number	xdoxslt:is_numeric()	is_numeric(value) — numeric test
+convert_base	number	xdoxslt:convert_base(, 10, 16)	convert_base(value, from, to)
+integer_part	number	xdoxslt:integer_part()	integer_part(value) — integer portion
+decimal_part	number	xdoxslt:decimal_part()	decimal_part(value) — fraction portion
+convert_case	string	xdoxslt:convert_case(, 'UPPER')	convert_case(text, 'UPPER'|'LOWER')
+init_cap	string	xdoxslt:init_cap()	init_cap(text) — initial capitals
+lpad	string	xdoxslt:lpad(, 10, ' ')	lpad(text, length, pad)
+rpad	string	xdoxslt:rpad(, 10, ' ')	rpad(text, length, pad)
+lpadb	string	xdoxslt:lpadb(, 10, ' ')	lpadb(text, bytes, pad) — byte-aware
+rpadb	string	xdoxslt:rpadb(, 10, ' ')	rpadb(text, bytes, pad) — byte-aware
+instr	string	xdoxslt:instr(, '')	instr(text, search) — position of substring
+index_of	string	xdoxslt:index_of(, '')	index_of(text, search)
+left	string	xdoxslt:left(, 5)	left(text, n) — leftmost n chars
+right	string	xdoxslt:right(, 5)	right(text, n) — rightmost n chars
+substringb	string	xdoxslt:substringb(, 1, 5)	substringb(text, start, bytes) — byte-aware substring
+truncate	string	xdoxslt:truncate(, 20)	truncate(text, length)
+replicate	string	xdoxslt:replicate('-', 10)	replicate(text, count)
+mtranslate	string	xdoxslt:mtranslate(, 'abc', 'xyz')	mtranslate(text, from, to)
+ora_translate	string	xdoxslt:ora_translate(, 'abc', 'xyz')	ora_translate(text, from, to)
+normalize_string	string	xdoxslt:normalize_string()	normalize_string(text)
+chr	string	xdoxslt:chr(65)	chr(code) — character from code point
+minimum	aggregate	xdoxslt:minimum()	minimum(node-set) — smallest value
+maximum	aggregate	xdoxslt:maximum()	maximum(node-set) — largest value
+ifelse	aggregate	xdoxslt:ifelse(, , )	ifelse(condition, then, else) — inline conditional
+distinct_values	aggregate	xdoxslt:distinct_values()	distinct_values(node-set)
+string_to_nodelist	aggregate	xdoxslt:string_to_nodelist(, ',')	string_to_nodelist(text, separator)
+contains_node	aggregate	xdoxslt:contains_node(, )	contains_node(node-set, node)
+next_element	aggregate	xdoxslt:next_element()	next_element(node)
+prev_element	aggregate	xdoxslt:prev_element()	prev_element(node)
+set_variable	variable	xdoxslt:set_variable($_XDOCTX, 'name', )	set_variable(ctx, name, value) — running variable (running totals)
+get_variable	variable	xdoxslt:get_variable($_XDOCTX, 'name')	get_variable(ctx, name)
+sequence_number	variable	xdoxslt:sequence_number($_XDOCTX, 'seq')	sequence_number(ctx, name) — current sequence value
+next_sequence_number	variable	xdoxslt:next_sequence_number($_XDOCTX, 'seq')	next_sequence_number(ctx, name)
+reset_sequence_number	variable	xdoxslt:reset_sequence_number($_XDOCTX, 'seq')	reset_sequence_number(ctx, name)
+create_sequence_number	variable	xdoxslt:create_sequence_number($_XDOCTX, 'seq', 1)	create_sequence_number(ctx, name, start)
+foreach_number	variable	xdoxslt:foreach_number($_XDOCTX, 1, 10, 1)	foreach_number(ctx, from, to, step) — numeric loop source
+get_xdo_property	variable	xdoxslt:get_xdo_property('name', $_XDOCTX)	get_xdo_property(name, ctx) — runtime property access
+getContextLocale	variable	xdoxslt:getContextLocale($_XDOCTX)	getContextLocale(ctx) — effective locale
+format_barcode	barcode	xdoxslt:format_barcode(, 'oracle.xdo.template.rtf.util.barcoder.BarcodeUtil', 'code128c')	format_barcode(data, vendorClass, method)
+register_barcode_vendor	barcode	xdoxslt:register_barcode_vendor('class', 'id')	register_barcode_vendor(class, id)
+qrcode	barcode	xdoxslt:qrcode(, 80)	qrcode(data, size) — QR code image
+pdf417	barcode	xdoxslt:pdf417()	pdf417(data) — PDF417 2-D barcode
+chart_svg	barcode	xdoxslt:chart_svg($_XDOCTX, 'chartXml')	chart_svg(ctx, definition) — data-driven SVG chart
+gauge_svg	barcode	xdoxslt:gauge_svg($_XDOCTX, 'gaugeXml')	gauge_svg(ctx, definition) — data-driven SVG gauge
+stopwatch_start	diagnostics	xdoxslt:stopwatch_start('name')	stopwatch_start(name) — profiling timer start (F-5.13)
+stopwatch_stop	diagnostics	xdoxslt:stopwatch_stop('name')	stopwatch_stop(name) — profiling timer stop
+stopwatch_print	diagnostics	xdoxslt:stopwatch_print('name')	stopwatch_print(name) — print timer to log

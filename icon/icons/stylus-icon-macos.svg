@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" role="img" aria-label="Stylus macOS app icon">
+  <defs>
+    <linearGradient id="mbg" x1="254" y1="150" x2="770" y2="912" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E62F2"></stop>
+      <stop offset="1" stop-color="#4736D4"></stop>
+    </linearGradient>
+    <linearGradient id="msheen" x1="512" y1="100" x2="512" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.20"></stop>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="mtop" x1="512" y1="100" x2="512" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.12"></stop>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+    <filter id="contact" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#1B1440" flood-opacity="0.32"></feDropShadow>
+    </filter>
+  </defs>
+
+  
+  <g filter="url(#contact)">
+    
+    <path d="M512 100&#xA;      C 232 100, 100 232, 100 512&#xA;      C 100 792, 232 924, 512 924&#xA;      C 792 924, 924 792, 924 512&#xA;      C 924 232, 792 100, 512 100 Z" fill="url(#mbg)"></path>
+    <path d="M512 100&#xA;      C 232 100, 100 232, 100 512&#xA;      C 100 792, 232 924, 512 924&#xA;      C 792 924, 924 792, 924 512&#xA;      C 924 232, 792 100, 512 100 Z" fill="url(#msheen)"></path>
+    <path d="M512 100&#xA;      C 232 100, 100 232, 100 512&#xA;      C 100 792, 232 924, 512 924&#xA;      C 792 924, 924 792, 924 512&#xA;      C 924 232, 792 100, 512 100 Z" fill="url(#mtop)"></path>
+  </g>
+
+  
+  <g transform="translate(100,100) scale(4.12)">
+    
+    <rect x="66" y="50" width="68" height="100" rx="9" fill="#ffffff"></rect>
+    <rect x="78" y="66" width="44" height="8" rx="4" fill="#4736D4"></rect>
+    <rect x="78" y="86" width="44" height="6" rx="3" fill="#C7CBF2"></rect>
+    <rect x="78" y="100" width="30" height="6" rx="3" fill="#C7CBF2"></rect>
+    <rect x="78" y="118" width="44" height="10" rx="3" fill="#F2C14E"></rect>
+    <rect x="78" y="136" width="24" height="6" rx="3" fill="#C7CBF2"></rect>
+    
+    <path d="M52 62c-11 6-16 20-16 38s5 32 16 38" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none"></path>
+    <path d="M148 62c11 6 16 20 16 38s-5 32-16 38" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none"></path>
+  </g>
+</svg>

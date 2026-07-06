@@ -1,0 +1,49 @@
+/* Theme 2A — dark. Dark chrome, paper stays white (F-1.7). */
+.root {
+    -c-region-bg: #0E1014;
+    -c-surface: #181A21;
+    -c-surface-subtle: #1C1F27;
+    -c-inset-bg: #1C1F27;
+    -c-appbar-bg: #1C1F27;
+    -c-toolbar2-bg: #1C1F27;
+    -c-tree-bg: #15171D;
+    -c-props-bg: #181A21;
+    -c-input-bg: #1C1F27;
+    -c-hairline: #23272F;
+    -c-hairline-strong: #2A2E38;
+    -c-control-border: #2E333F;
+    -c-text: #E4E7EE;
+    -c-text-secondary: #9AA2B0;
+    -c-text-muted: #6A7284;
+    -c-accent: #5145E8;
+    -c-accent-text: #8B84FF;
+    -c-accent-soft: #221F33;
+    -c-accent-border: #2E2A45;
+    -c-accent-shadow: rgba(0,0,0,0.45);
+    -c-segment-active-bg: #2E3340;
+    -c-structure: #8B84FF;
+    -c-condition: #E0A94A;
+    -c-code: #C792EA;
+    -c-data: #4FB6C0;
+    -c-success: #5FC59E;
+    -c-error: #F0776A;
+    -c-token-bg: #221F33;
+    -c-token-text: #B9B4FF;
+    -c-token-border: #2E2A45;
+    -c-paper: #FFFFFF;
+    -c-paper-shadow: rgba(0,0,0,0.50);
+    -c-margin-guide: #D7DAF2;
+
+    /* code editor (F-1.35) */
+    -c-code-bg: #14161C;
+    -c-code-text: #E4E7EE;
+    -c-code-lineno: #4A5060;
+    -c-code-xsl: #C792EA;
+    -c-code-fo: #4FB6C0;
+    -c-code-tag: #82AAFF;
+    -c-code-bracket: #6A7284;
+    -c-code-attr: #E0A94A;
+    -c-code-value: #5FC59E;
+    -c-code-comment: #5B6472;
+    -c-code-error-bg: #3A2224;
+}
